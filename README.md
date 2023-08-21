@@ -1,11 +1,11 @@
-# `TapeoutSzn`
+# `TapeoutSzn`👏
 The road to tapeout is real. Welcome to my assignment hub!
 
 This repository contains a list of exercises incorporated into various lab activities spanning a time period of 4 months leading to a potential tapeout! 
 
 Design Automation to it's fullest!
 
-# `Introduction to RISC-V ISA and GNU Compiler Toolchain`
+# `Introduction to RISC-V ISA and GNU Compiler Toolchain` 🤖
 
 `RISC-V` is an open `ISA` (Instruction Set Architecture) which gives any hardware designer the privilege to utilize an already existing framework to run his/her own applications while having the flexibility to tailor his piece of hardware accordingly.
 
@@ -63,7 +63,7 @@ x28-x31 : Temporary Registers
 
 ---
 
-### Lab work for RVDAY1_MYTH covers :  
+### Lab work for RVDAY1_MYTH📚
 1) Sum from 1 to N compute : compiling via gcc and disassembling through `riscv64-unknown-elf-objdump` -d <object_file> with -O1 and -Ofast optimizations and proceeding to `simulate` via a `InstructionAccurate` Spike Simulator.
 
 
@@ -83,7 +83,7 @@ printf("%d\n",temp);
 ```
 ---
 
-# Spike Simulation and Debug
+# Spike Simulation and Debug 🐛
 
 >*What is Spike?*
 >Spike is an instruction accurate RISC-V processor that can be invigorated to 32 or 64 bit utilization preferably used when modelling the execution correctness of an application.
@@ -97,7 +97,7 @@ Spike allows the flexibility to access and view the contents of **each** registe
 
 ---
 
-# `Integer Number Representation`
+# `Integer Number Representation`🕐
 
 This subset of this day throws light on the different `Number Systems` that are prevalent and the importance between utilizing these different data types in performing operations. 
 
@@ -137,10 +137,10 @@ int main(){
 }
 ```
 ---
-# RVDAY2_MYTH :
+# RVDAY2_MYTH🥳
 
 ---
-# Application Binary Interface
+# Application Binary Interface 🖥️
 ---
 ## Introduction to ABI 
 
@@ -171,7 +171,7 @@ An Application Binary Interface (ABI) is a set of conventions or rules that gove
 12. **Cross-Platform Development**: ABIs are especially important for cross-platform development, where code needs to run on multiple platforms with potentially different hardware architectures and operating systems.
     
 13. **Security**: ABIs may include security-related aspects, such as buffer overflow protection mechanisms and stack canaries.
-# Memory Allocation for Double Words
+# Memory Allocation for Double Words🤔
 ---
 ->64-bit number (or any multi-byte value) can be loaded into memory in little-endian or big-endian. It involves understanding the byte order and arranging the bytes accordingly
 
@@ -184,7 +184,7 @@ An Application Binary Interface (ABI) is a set of conventions or rules that gove
 ![Big Endian!](https://user-images.githubusercontent.com/103078929/261369046-aa53e082-5878-4e3f-948a-f6f080ed0ed2.png)
 
 ---
-### RISC-V Instructions:
+### RISC-V Instructions🥇
 
 RISC-V instructions can be categorized into different categories based on their functionality. Here are some common types of RISC-V instructions:
 
@@ -228,7 +228,7 @@ RISC-V instructions can be categorized into different categories based on their 
 - **RV64 and RV32 Variants:** RISC-V can be configured in different bit-widths, with RV64 being a 64-bit architecture and RV32 being a 32-bit architecture. Instructions for these variants have slightly different encoding to accommodate the different data widths.
 ![Various Instruction Formats within the RISC-V Spectrum](https://camo.githubusercontent.com/21a8aa2033a3a0233295924dbb9548c06a86ad71665fc9805e56528e95ecf7db/68747470733a2f2f6465766f70656469612e6f72672f696d616765732f61727469636c652f3131302f333830382e313533353330313633362e706e67)
 
-# Load, Add and Store Instructions
+# Load, Add and Store Instructions🌴
 ---
 Load, Add, and Store instructions are fundamental operations in computer architecture and assembly programming. They are often used to manipulate data within a computer's memory and registers.
 Example -1  `ld x8, 16(x23)`
