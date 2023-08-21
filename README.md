@@ -13,8 +13,11 @@ Design Automation to it's fullest!
 
  >An `Instruction Set Architecture` establishes a handshake between hardware and software, multiple times this bridge has often been hard to cross due to licensing difficulties surrounding giant companies like `Intel` and `ARM` owning popular ISAs like the `x86-64`, but not anymore, thanks to `RISC-V` 
 
+![The RISC-V Flow!](https://user-images.githubusercontent.com/142098395/261306361-4eabe0b7-4581-419b-88e7-84c7ac1dac8e.png)
+
 ---
 ###### An application designed through a high level language (HLL) is brought down to assembly level via a compiler. Most of the time these compilers are provided by `GCC` (GNU's Compiler Collection) and they are tailored to a specific ISA.
+![Compilation to Baremetal!](https://user-images.githubusercontent.com/103078929/261504893-1d76b7ef-cac9-4331-9190-31af36525e0c.png)
 
 ---
 ##### The assembly counterpart of an application is fed to an assembler which procures binaries (the only set of primitives that a machine can truly understand).
@@ -54,8 +57,11 @@ x28-x31 : Temporary Registers
 
 >Where the register pseudo names are referred to as the `ABI` (Application Binary Interface).
 
+![RISC-V's ABI Interface, simplistic!](https://camo.githubusercontent.com/c04ed42276c00a928a47b5a8220df02f1fb4a123453509f9484cd5940fb25299/68747470733a2f2f7765622e656563732e75746b2e6564752f7e736d61727a312f636f75727365732f6563653335362f6e6f7465732f726973632f696d67732f72656766696c652e706e67)
+
 ---
-### `Lab work for RVDAY1_MYTH covers` :  
+
+### Lab work for RVDAY1_MYTH covers :  
 1) Sum from 1 to N compute : compiling via gcc and disassembling through `riscv64-unknown-elf-objdump` -d <object_file> with -O1 and -Ofast optimizations and proceeding to `simulate` via a `InstructionAccurate` Spike Simulator.
 
 
@@ -75,7 +81,7 @@ printf("%d\n",temp);
 ```
 ---
 
-# `Spike Simulation and Debug`
+# Spike Simulation and Debug
 
 >*What is Spike?*
 >Spike is an instruction accurate RISC-V processor that can be invigorated to 32 or 64 bit utilization preferably used when modelling the execution correctness of an application.
@@ -99,7 +105,7 @@ This subset of this day throws light on the different `Number Systems` that are 
 >- Range : -(2^(N-1)) to 2^(N-1) - 1.
 
 ---
-### `Unsigned Numbers with Spike`
+### Unsigned Numbers with Spike
 ##### 1) `unsignedint.c`
 ```c
 #include <stdio.h>
@@ -113,8 +119,6 @@ int main(){
 	return 0;
 }
 ```
----
-### `Signed Numbers With Spike`
 ##### 2) `signedint.c`
 ```c
 #include <stdio.h>
@@ -129,12 +133,12 @@ int main(){
 }
 ```
 ---
-# `RVDAY2_MYTH` :
+# RVDAY2_MYTH :
 
 ---
-# `Application Binary Interface`
+# Application Binary Interface
 ---
-## `Introduction to ABI`
+## Introduction to ABI 
 
 An Application Binary Interface (ABI) is a set of conventions or rules that govern how functions, data structures, and system calls should be organized and accessed in a binary program or library. It defines the low-level interface between different parts of a program or between a program and the operating system. Here are the key points about an ABI:
 
@@ -163,13 +167,64 @@ An Application Binary Interface (ABI) is a set of conventions or rules that gove
 12. **Cross-Platform Development**: ABIs are especially important for cross-platform development, where code needs to run on multiple platforms with potentially different hardware architectures and operating systems.
     
 13. **Security**: ABIs may include security-related aspects, such as buffer overflow protection mechanisms and stack canaries.
-# `Memory Allocation for Double Words`
+# Memory Allocation for Double Words
 ---
-64-bit number (or any multi-byte value) can be loaded into memory in little-endian or big-endian. It involves understanding the byte order and arranging the bytes accordingly
+->64-bit number (or any multi-byte value) can be loaded into memory in little-endian or big-endian. It involves understanding the byte order and arranging the bytes accordingly
 
 1. **Little-Endian:** In little-endian representation, you store the least significant byte (LSB) at the lowest memory address and the most significant byte (MSB) at the highest memory address.
+
+![Little Endian](https://user-images.githubusercontent.com/103078929/261368957-307fabf6-7f58-4337-8171-6d62d99a4386.png)
+
 2. **Big-Endian:** In big-endian representation, you store the most significant byte (MSB) at the lowest memory address and the least significant byte (LSB) at the highest memory address.
-# `Load, Add and Store Instructions`
+
+![Big Endian!](https://user-images.githubusercontent.com/103078929/261369046-aa53e082-5878-4e3f-948a-f6f080ed0ed2.png)
+
+---
+### RISC-V Instructions:
+
+RISC-V instructions can be categorized into different categories based on their functionality. Here are some common types of RISC-V instructions:
+
+- **R-Type Instructions:** These are used for arithmetic and logic operations between two source registers, storing the result in a destination register. Common R-type instructions include:
+    
+    - `add`: Addition
+    - `sub`: Subtraction
+    - `and`: Bitwise AND
+    - `or`: Bitwise OR
+    - `xor`: Bitwise XOR
+    - `slt`: Set Less Than (signed)
+    - `sltu`: Set Less Than (unsigned)
+- **I-Type Instructions:** These are used for arithmetic and logic operations that involve an immediate value (constant) and a source register. Common I-type instructions include:
+    
+    - `addi`: Add Immediate
+    - `andi`: Bitwise AND with Immediate
+    - `ori`: Bitwise OR with Immediate
+    - `xori`: Bitwise XOR with Immediate
+    - `lw`: Load Word (load data from memory)
+    - `sw`: Store Word (store data to memory)
+    - `beq`: Branch if Equal
+    - `bne`: Branch if Not Equal
+- **S-Type Instructions:** These are similar to I-type instructions but are used for storing values from a source register into memory. Common S-type instructions include:
+    
+    - `sb`: Store Byte
+    - `sh`: Store Halfword
+    - `sw`: Store Word
+- **U-Type Instructions:** These are used for setting large immediate values into registers or for jumping to an absolute address. Common U-type instructions include:
+    
+    - `lui`: Load Upper Immediate (set the upper bits of a register)
+    - `auipc`: Add Upper Immediate to PC (used for address calculations)
+- J-Type Instructions: These are used for jumping or branching to different program locations. Common J-type instructions include:
+    
+    - `jal`: Jump and Link (used for function calls)
+    - `jalr`: Jump and Link Register (used for function calls)
+- **F-Type and D-Type Instructions (Floating-Point):** These instructions are used for floating-point arithmetic and include various operations like addition, multiplication, and comparison. These instructions typically have an 'F' or 'D' prefix to indicate single-precision or double-precision floating-point operations.
+    
+    - `fadd.s`: Single-precision floating-point addition
+    - `fmul.d`: Double-precision floating-point multiplication
+    - `fcmp.s`: Single-precision floating-point comparison
+- **RV64 and RV32 Variants:** RISC-V can be configured in different bit-widths, with RV64 being a 64-bit architecture and RV32 being a 32-bit architecture. Instructions for these variants have slightly different encoding to accommodate the different data widths.
+![Various Instruction Formats within the RISC-V Spectrum](https://camo.githubusercontent.com/21a8aa2033a3a0233295924dbb9548c06a86ad71665fc9805e56528e95ecf7db/68747470733a2f2f6465766f70656469612e6f72672f696d616765732f61727469636c652f3131302f333830382e313533353330313633362e706e67)
+
+# Load, Add and Store Instructions
 ---
 Load, Add, and Store instructions are fundamental operations in computer architecture and assembly programming. They are often used to manipulate data within a computer's memory and registers.
 Example -1  `ld x8, 16(x23)`
@@ -187,7 +242,7 @@ In this Example
 - `add` is the add instruction.
 - `x8` is the destination register.
 - `x24` and `x8` are the source registers.
-# `Application Binary Interface LabWork!`
+# Application Binary Interface LabWork!
 #### abiwork.c `c-program`
 
 
