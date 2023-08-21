@@ -5,7 +5,7 @@ This repository contains a list of exercises incorporated into various lab activ
 
 Design Automation to it's fullest!
 
-![Tape-Out!](https://www.eetindia.co.in/wp-content/uploads/sites/4/images/9ea82841-c72b-4e12-9d23-475fcfea635a.jpg?w=1024)
+![Automation!](https://1401700980.rsc.cdn77.org/data/images/full/12204/silicon-wafer.jpg)
 
 
 # `Introduction to RISC-V ISA and GNU Compiler Toolchain` 🤖
