@@ -5,7 +5,7 @@ This repository contains a list of exercises incorporated into various lab activ
 
 Design Automation to it's fullest!
 
-# Introduction to RISC-V ISA and GNU Compiler Toolchain
+# `Introduction to RISC-V ISA and GNU Compiler Toolchain`
 
 `RISC-V` is an open `ISA` (Instruction Set Architecture) which gives any hardware designer the privilege to utilize an already existing framework to run his/her own applications while having the flexibility to tailor his piece of hardware accordingly.
 
@@ -55,7 +55,7 @@ x28-x31 : Temporary Registers
 >Where the register pseudo names are referred to as the `ABI` (Application Binary Interface).
 
 ---
-### Lab work for RVDAY1_MYTH covers :  
+### `Lab work for RVDAY1_MYTH covers` :  
 1) Sum from 1 to N compute : compiling via gcc and disassembling through `riscv64-unknown-elf-objdump` -d <object_file> with -O1 and -Ofast optimizations and proceeding to `simulate` via a `InstructionAccurate` Spike Simulator.
 
 
@@ -75,7 +75,7 @@ printf("%d\n",temp);
 ```
 ---
 
-# Spike Simulation and Debug
+# `Spike Simulation and Debug`
 
 >*What is Spike?*
 >Spike is an instruction accurate RISC-V processor that can be invigorated to 32 or 64 bit utilization preferably used when modelling the execution correctness of an application.
@@ -99,7 +99,7 @@ This subset of this day throws light on the different `Number Systems` that are 
 >- Range : -(2^(N-1)) to 2^(N-1) - 1.
 
 ---
-### Unsigned Numbers with Spike
+### `Unsigned Numbers with Spike`
 ##### 1) `unsignedint.c`
 ```c
 #include <stdio.h>
@@ -113,6 +113,8 @@ int main(){
 	return 0;
 }
 ```
+---
+### `Signed Numbers With Spike`
 ##### 2) `signedint.c`
 ```c
 #include <stdio.h>
@@ -127,12 +129,12 @@ int main(){
 }
 ```
 ---
-# RVDAY2_MYTH :
+# `RVDAY2_MYTH` :
 
 ---
-# Application Binary Interface
+# `Application Binary Interface`
 ---
-## Introduction to ABI 
+## `Introduction to ABI`
 
 An Application Binary Interface (ABI) is a set of conventions or rules that govern how functions, data structures, and system calls should be organized and accessed in a binary program or library. It defines the low-level interface between different parts of a program or between a program and the operating system. Here are the key points about an ABI:
 
@@ -161,13 +163,13 @@ An Application Binary Interface (ABI) is a set of conventions or rules that gove
 12. **Cross-Platform Development**: ABIs are especially important for cross-platform development, where code needs to run on multiple platforms with potentially different hardware architectures and operating systems.
     
 13. **Security**: ABIs may include security-related aspects, such as buffer overflow protection mechanisms and stack canaries.
-# Memory Allocation for Double Words
+# `Memory Allocation for Double Words`
 ---
 64-bit number (or any multi-byte value) can be loaded into memory in little-endian or big-endian. It involves understanding the byte order and arranging the bytes accordingly
 
 1. **Little-Endian:** In little-endian representation, you store the least significant byte (LSB) at the lowest memory address and the most significant byte (MSB) at the highest memory address.
 2. **Big-Endian:** In big-endian representation, you store the most significant byte (MSB) at the lowest memory address and the least significant byte (LSB) at the highest memory address.
-# Load, Add and Store Instructions
+# `Load, Add and Store Instructions`
 ---
 Load, Add, and Store instructions are fundamental operations in computer architecture and assembly programming. They are often used to manipulate data within a computer's memory and registers.
 Example -1  `ld x8, 16(x23)`
@@ -185,7 +187,7 @@ In this Example
 - `add` is the add instruction.
 - `x8` is the destination register.
 - `x24` and `x8` are the source registers.
-# Application Binary Interface LabWork!
+# `Application Binary Interface LabWork!`
 #### abiwork.c `c-program`
 
 
