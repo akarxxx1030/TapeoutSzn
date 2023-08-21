@@ -5,6 +5,9 @@ This repository contains a list of exercises incorporated into various lab activ
 
 Design Automation to it's fullest!
 
+![Tape-Out!](https://www.eetindia.co.in/wp-content/uploads/sites/4/images/9ea82841-c72b-4e12-9d23-475fcfea635a.jpg?w=1024)
+
+
 # `Introduction to RISC-V ISA and GNU Compiler Toolchain` 🤖
 
 `RISC-V` is an open `ISA` (Instruction Set Architecture) which gives any hardware designer the privilege to utilize an already existing framework to run his/her own applications while having the flexibility to tailor his piece of hardware accordingly.
