@@ -61,7 +61,7 @@ x28-x31 : Temporary Registers
 
 ---
 
-### Lab work for RVDAY1_MYTH covers :  
+### `Lab work for RVDAY1_MYTH covers` :  
 1) Sum from 1 to N compute : compiling via gcc and disassembling through `riscv64-unknown-elf-objdump` -d <object_file> with -O1 and -Ofast optimizations and proceeding to `simulate` via a `InstructionAccurate` Spike Simulator.
 
 
@@ -81,7 +81,7 @@ printf("%d\n",temp);
 ```
 ---
 
-# Spike Simulation and Debug
+# `Spike Simulation and Debug`
 
 >*What is Spike?*
 >Spike is an instruction accurate RISC-V processor that can be invigorated to 32 or 64 bit utilization preferably used when modelling the execution correctness of an application.
@@ -105,7 +105,7 @@ This subset of this day throws light on the different `Number Systems` that are 
 >- Range : -(2^(N-1)) to 2^(N-1) - 1.
 
 ---
-### Unsigned Numbers with Spike
+### `Unsigned Numbers with Spike`
 ##### 1) `unsignedint.c`
 ```c
 #include <stdio.h>
