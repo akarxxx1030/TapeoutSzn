@@ -267,7 +267,7 @@ int main()
 }
 
 ```
-#### assembly.c `assembly program`
+#### assembly.s `assembly program`
 ```c
 .section .text
 .global load
