@@ -9,6 +9,8 @@ Design Automation to it's fullest!
 
 `RISC-V` is an open `ISA` (Instruction Set Architecture) which gives any hardware designer the privilege to utilize an already existing framework to run his/her own applications while having the flexibility to tailor his piece of hardware accordingly.
 
+![RISC-V!](http://blog.trinamic.com/wp-content/uploads/2017/11/20151229-riscv.jpg)
+
 ---
 
  >An `Instruction Set Architecture` establishes a handshake between hardware and software, multiple times this bridge has often been hard to cross due to licensing difficulties surrounding giant companies like `Intel` and `ARM` owning popular ISAs like the `x86-64`, but not anymore, thanks to `RISC-V` 
@@ -61,7 +63,7 @@ x28-x31 : Temporary Registers
 
 ---
 
-### `Lab work for RVDAY1_MYTH covers` :  
+### Lab work for RVDAY1_MYTH covers :  
 1) Sum from 1 to N compute : compiling via gcc and disassembling through `riscv64-unknown-elf-objdump` -d <object_file> with -O1 and -Ofast optimizations and proceeding to `simulate` via a `InstructionAccurate` Spike Simulator.
 
 
@@ -81,13 +83,15 @@ printf("%d\n",temp);
 ```
 ---
 
-# `Spike Simulation and Debug`
+# Spike Simulation and Debug
 
 >*What is Spike?*
 >Spike is an instruction accurate RISC-V processor that can be invigorated to 32 or 64 bit utilization preferably used when modelling the execution correctness of an application.
 
 ***`Spike` allows a series of compiler flags to tag a `proxykernal` that runs `baremetal` programs.***
 Spike allows the flexibility to access and view the contents of **each** register after the completion of a program.
+
+![Spike's Environment](https://cdn-ak.f.st-hatena.com/images/fotolife/m/msyksphinz/20180611/20180611010051.png)
 
 >Instruction Accurate Simulator is a software tool used in computer architecture research and development to model the behavior of a computer's hardware at a very detailed level. This type of simulator is designed to accurately replicate the execution of individual machine instructions on a specific processor's microarchitecture.
 
@@ -105,7 +109,7 @@ This subset of this day throws light on the different `Number Systems` that are 
 >- Range : -(2^(N-1)) to 2^(N-1) - 1.
 
 ---
-### `Unsigned Numbers with Spike`
+### Unsigned Numbers with Spike
 ##### 1) `unsignedint.c`
 ```c
 #include <stdio.h>
@@ -276,3 +280,4 @@ blt a3, a2, loop
 add a0, a4, zero
 ret
 ```
+
