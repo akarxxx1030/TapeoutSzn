@@ -86,13 +86,16 @@ printf("%d\n",temp);
 ```
 ---
 
-![sum1ton.c on Spike!](file:///home/aakarsh/Pictures/Screenshots/sum1ton.png)
+![sum1ton](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/3c0936b6-adab-41ed-b8f9-2ec3c1cc3a50)
 
-![objdump sum1ton.c](file:///home/aakarsh/Pictures/Screenshots/objdumpsum1ton.png)
 
-![Assembly Breakdown of sum1ton.c](file:///home/aakarsh/Pictures/Screenshots/sum1tonassembly.png)
+![objdumpsum1ton](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/9bd8b9a6-8dc6-40b8-932a-e5ce40b67a39)
 
-![Debug With Spike - A Glimpse!](file:///home/aakarsh/Pictures/Screenshots/spikedebug.png)
+
+![sum1tonassembly](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/770a3084-0aaf-4045-a002-4a16fb80c956)
+
+![spikedebug](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/12f6c0fa-f0ad-43b6-bf00-144bbce17712)
+
 
 # Spike Simulation and Debug 🐛
 
@@ -134,8 +137,10 @@ int main(){
 	return 0;
 }
 ```
-![Unsigned Output!](file:///home/aakarsh/Pictures/Screenshots/unsignedoutput.png)
-![Unsigned Assembly Breakdown!](file:///home/aakarsh/Pictures/Screenshots/unsignedassembly.png)
+![unsignedoutput](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/a21ecf38-9a2e-44ff-8456-d6190ef8b58f)
+
+![unsignedassembly](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/bf085c9c-2834-4add-8198-a48400148d0f)
+
 
 
 ##### 2) `signedint.c`
@@ -151,8 +156,10 @@ int main(){
 	return 0;
 }
 ```
- ![Signed Output!](file:///home/aakarsh/Pictures/Screenshots/signedoutput.png)
- ![Signed-Unsigned On Spike!](file:///home/aakarsh/Pictures/Screenshots/signedunsignedspike.png)
+![signedoutput](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/ece92f36-4749-4e30-b745-b8bb7eb7eb6f)
+
+![signedunsignedspike](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/e6f86af0-38f9-4612-92b2-d2a64e0f589e)
+
 ---
 # RVDAY2_MYTH🥳
 
@@ -297,5 +304,6 @@ blt a3, a2, loop
 add a0, a4, zero
 ret
 ```
-![ABI with Spike!](file:///home/aakarsh/Pictures/Screenshots/abispike.png)
+![abispike](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/8754ede7-9ae6-4f21-bcb3-d5c0f869bbd0)
+
 
