@@ -87,9 +87,12 @@ printf("%d\n",temp);
 ---
 
 ![sum1ton.c on Spike!](file:///home/aakarsh/Pictures/Screenshots/sum1ton.png)
+
 ![objdump sum1ton.c](file:///home/aakarsh/Pictures/Screenshots/objdumpsum1ton.png)
-![assembly breakdown of sum1ton.c](file:///home/aakarsh/Pictures/Screenshots/sum1tonassembly.png)
-![debug with spike - A Glimpse!](file:///home/aakarsh/Pictures/Screenshots/spikedebug.png)
+
+![Assembly Breakdown of sum1ton.c](file:///home/aakarsh/Pictures/Screenshots/sum1tonassembly.png)
+
+![Debug With Spike - A Glimpse!](file:///home/aakarsh/Pictures/Screenshots/spikedebug.png)
 
 # Spike Simulation and Debug 🐛
 
@@ -131,7 +134,7 @@ int main(){
 	return 0;
 }
 ```
-![unsignedoutput!](file:///home/aakarsh/Pictures/Screenshots/unsignedoutput.png)
+![Unsigned Output!](file:///home/aakarsh/Pictures/Screenshots/unsignedoutput.png)
 ![Unsigned Assembly Breakdown!](file:///home/aakarsh/Pictures/Screenshots/unsignedassembly.png)
 
 
@@ -148,8 +151,8 @@ int main(){
 	return 0;
 }
 ```
-![signedoutput!](file:///home/aakarsh/Pictures/Screenshots/signedoutput.png)
-![signed-unsigned on spike!](file:///home/aakarsh/Pictures/Screenshots/signedunsignedspike.png)
+![Signed Output!](file:///home/aakarsh/Pictures/Screenshots/signedoutput.png)
+![Signed-Unsigned On Spike!](file:///home/aakarsh/Pictures/Screenshots/signedunsignedspike.png)
 ---
 # RVDAY2_MYTH🥳
 
