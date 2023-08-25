@@ -86,6 +86,11 @@ printf("%d\n",temp);
 ```
 ---
 
+![sum1ton.c on Spike!](file:///home/aakarsh/Pictures/Screenshots/sum1ton.png)
+![objdump sum1ton.c](file:///home/aakarsh/Pictures/Screenshots/objdumpsum1ton.png)
+![assembly breakdown of sum1ton.c](file:///home/aakarsh/Pictures/Screenshots/sum1tonassembly.png)
+![debug with spike - A Glimpse!](file:///home/aakarsh/Pictures/Screenshots/spikedebug.png)
+
 # Spike Simulation and Debug 🐛
 
 >*What is Spike?*
@@ -126,6 +131,10 @@ int main(){
 	return 0;
 }
 ```
+![unsignedoutput!](file:///home/aakarsh/Pictures/Screenshots/unsignedoutput.png)
+![Unsigned Assembly Breakdown!](file:///home/aakarsh/Pictures/Screenshots/unsignedassembly.png)
+
+
 ##### 2) `signedint.c`
 ```c
 #include <stdio.h>
@@ -139,6 +148,8 @@ int main(){
 	return 0;
 }
 ```
+![signedoutput!](file:///home/aakarsh/Pictures/Screenshots/signedoutput.png)
+![signed-unsigned on spike!](file:///home/aakarsh/Pictures/Screenshots/signedunsignedspike.png)
 ---
 # RVDAY2_MYTH🥳
 
@@ -283,4 +294,5 @@ blt a3, a2, loop
 add a0, a4, zero
 ret
 ```
+![ABI with Spike!](file:///home/aakarsh/Pictures/Screenshots/abispike.png)
 
