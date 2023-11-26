@@ -317,19 +317,20 @@ The synthesis sctipts can be found in the verilog folder, the same steps as abov
 > Find all the verilog used in the verilog directory
 
 ### opt_check1.v
-
+![Alt text](<Screenshot from 2023-10-28 17-28-57.png>)
 
 ### opt_check2.v
-
+![image](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/2cee5cbe-0652-4a71-a666-0434876fde64)
 
 ### opt_check3.v
 
+![image-1](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/7f9f45be-b4a2-4d50-bb5f-cf0d169a4430)
 
 ### opt_check4.v
 
-
+![image-2](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/742453bc-8f90-4485-bedf-47bccc09c490)
 ### multipe_modules_opt.v
-
+![image-3](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/94309177-11e0-4eca-b83c-1b4b66623ad8)
 
 Inorder to optimise a verilog files that has submodules, We have to first flatten it, then optimize opt_clean -purge and complete the synthesis process
 
@@ -338,23 +339,34 @@ Here we can observe that instead of using 'and' gate and 'or' gates, its using '
 > The waveforms can be vizualized using gtk wave using vcd 
 
 ###  dff_const1 dff_const1_tb.v
+![image-5](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/d9e7dfbe-d560-480c-9827-b34b2255872c)
+![image-4](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/898cff11-5617-49d9-83ab-5310f5c192e6)
 
 ###  dff_const2 dff_const2_tb.v
-
+![image-8](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/b9e47249-79a7-4ebc-8e1d-8e7265567b9f)
+![image-7](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/83aa260c-684f-415d-bd68-6e4446cf8a79)
 
 ### dff_cosnt3 dff_const3_tb.v
+![image-9](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/af28f599-079b-469b-8180-04bb0c606c2a)
 
+![image-10](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/2d20842b-3877-45c4-9dcd-e7faf286c7b2)
 
 ### dff_const4 dff_const4_tb.v
+![image-11](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/55b79b42-eb33-45a4-a65b-f99520ca736b)
+
+![image-12](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/31b8fc91-7694-42cc-8207-e08e800169ea)
 
 ### dff_const5 dff_const5_tb.v
 
+![image-13](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/ca6935a0-088d-46dc-b8a1-f16b2fc76f28)
+![image-14](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/5c9957bb-4026-43d8-b83c-dc9fcfb7657e)
 
 ### counter_opt1.v
-
+![image-15](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/0069ab97-65ce-4989-945e-e2fcc2788a00)
 
 ### counter_opt2.v
 
+![image-16](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/5c6c3b9d-89e3-4758-a5a5-e3a6c1a4c44c)
 
 >Usually a 3 bit counter requires 3 flops but since the output here is dependent on only the LSB and other 2 bits are unused. Therefore only one flop is being down and as we know that LSB toggles every clock cylce,its just using an inverter to invert the output at every clock cycle. - counter1.v dot diag shows us this
 
@@ -390,15 +402,21 @@ On running the above command we can get the waveforms using gtk wave.
 ## presynthesis(above) and post-synthesis simulation(below) conditional_mux.v conditional_mux_tb.v
 
 
+![image-33](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/a2d2a52b-262f-473c-920e-7f9f6bf1ab08)
+![image-34](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/4f4be162-ca2b-4efa-a925-afa1e83d9a68)
 
 > The above shows presynthesis and post-synthesis waveforms, as we can see both are so same hece we can confirms that the synthesized netlist is functionally correct
 
 ## presynthesis(above) and post-synthesis(below) bad_mux.v bad_mux_tb.v
 
 > Checking functionality with waveforms
+![image-35](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/77d1c816-fdfe-4b05-935f-c3e1de2ac8d0)
 
+![image-37](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/68ca5cb2-110a-4e32-b45a-faa5bffbaa3f)
+![image-36](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/c81dc57c-1d80-42cf-8258-5bb2f0d83dce)
 
 ## presynthesis(above) and post-synthesis(below) Blocking_error.v Blocking_error_tb.v
+![image-23](https://github.com/akarxxx1030/TapeoutSzn/assets/102870828/116422d7-e3e9-4101-9440-976c5f84d431)
 
 
 > find all the TB, Waveforms(vwf files) and verilog files in the verilog directory.
