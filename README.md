@@ -317,19 +317,19 @@ The synthesis sctipts can be found in the verilog folder, the same steps as abov
 > Find all the verilog used in the verilog directory
 
 ### opt_check1.v
-![Alt text](<Screenshot from 2023-10-28 17-28-57.png>)
+
 
 ### opt_check2.v
-![Alt text](image.png)
+
 
 ### opt_check3.v
-![Alt text](image-1.png)
+
 
 ### opt_check4.v
-![Alt text](image-2.png)
+
 
 ### multipe_modules_opt.v
-![Alt text](image-3.png)
+
 
 Inorder to optimise a verilog files that has submodules, We have to first flatten it, then optimize opt_clean -purge and complete the synthesis process
 
@@ -338,30 +338,23 @@ Here we can observe that instead of using 'and' gate and 'or' gates, its using '
 > The waveforms can be vizualized using gtk wave using vcd 
 
 ###  dff_const1 dff_const1_tb.v
-![Alt text](image-5.png)
-![Alt text](image-6.png)
 
 ###  dff_const2 dff_const2_tb.v
-![Alt text](image-7.png)
-![Alt text](image-8.png)
+
 
 ### dff_cosnt3 dff_const3_tb.v
-![Alt text](image-9.png)
-![Alt text](image-10.png)
+
 
 ### dff_const4 dff_const4_tb.v
-![Alt text](image-11.png)
-![Alt text](image-12.png)
 
 ### dff_const5 dff_const5_tb.v
-![Alt text](image-13.png)
-![Alt text](image-14.png)
+
 
 ### counter_opt1.v
-![Alt text](image-15.png)
+
 
 ### counter_opt2.v
-![Alt text](image-16.png)
+
 
 >Usually a 3 bit counter requires 3 flops but since the output here is dependent on only the LSB and other 2 bits are unused. Therefore only one flop is being down and as we know that LSB toggles every clock cylce,its just using an inverter to invert the output at every clock cycle. - counter1.v dot diag shows us this
 
@@ -396,19 +389,16 @@ On running the above command we can get the waveforms using gtk wave.
 
 ## presynthesis(above) and post-synthesis simulation(below) conditional_mux.v conditional_mux_tb.v
 
-![Alt text](image-33.png)
-![Alt text](image-34.png)
+
 
 > The above shows presynthesis and post-synthesis waveforms, as we can see both are so same hece we can confirms that the synthesized netlist is functionally correct
 
 ## presynthesis(above) and post-synthesis(below) bad_mux.v bad_mux_tb.v
 
 > Checking functionality with waveforms
-![Alt text](image-35.png)
-![Alt text](image-36.png)
-![Alt text](image-37.png)
+
 
 ## presynthesis(above) and post-synthesis(below) Blocking_error.v Blocking_error_tb.v
-![Alt text](image-23.png)
+
 
 > find all the TB, Waveforms(vwf files) and verilog files in the verilog directory.
